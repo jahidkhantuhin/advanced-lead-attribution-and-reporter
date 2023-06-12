@@ -1,0 +1,32 @@
+2022/12/09 12:14:50 [notice] 1#1: using the "epoll" event method
+2022/12/09 12:14:50 [notice] 1#1: nginx/1.23.2
+2022/12/09 12:14:50 [notice] 1#1: built by gcc 11.2.1 20220219 (Alpine 11.2.1_git20220219) 
+2022/12/09 12:14:50 [notice] 1#1: OS: Linux 5.10.102.1-microsoft-standard-WSL2
+2022/12/09 12:14:50 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/12/09 12:14:50 [notice] 1#1: start worker processes
+2022/12/09 12:14:50 [notice] 1#1: start worker process 29
+2022/12/09 12:14:50 [notice] 1#1: start worker process 30
+2022/12/09 12:14:50 [notice] 1#1: start worker process 31
+2022/12/09 12:14:50 [notice] 1#1: start worker process 32
+2022/12/09 12:14:50 [notice] 1#1: start worker process 33
+2022/12/09 12:14:50 [notice] 1#1: start worker process 34
+2022/12/09 12:14:50 [notice] 1#1: start worker process 35
+2022/12/09 12:14:50 [notice] 1#1: start worker process 36
+2022/12/09 12:14:50 [notice] 1#1: start worker process 37
+2022/12/09 12:14:50 [notice] 1#1: start worker process 38
+2022/12/09 12:14:50 [notice] 1#1: start worker process 39
+2022/12/09 12:14:50 [notice] 1#1: start worker process 40
+2022/12/09 12:14:50 [notice] 1#1: start worker process 41
+2022/12/09 12:14:50 [notice] 1#1: start worker process 42
+2022/12/09 12:14:50 [notice] 1#1: start worker process 43
+2022/12/09 12:14:50 [notice] 1#1: start worker process 44
+2022/12/09 12:21:15 [warn] 31#31: *6 an upstream response is buffered to a temporary file /var/cache/nginx/proxy_temp/1/00/0000000001 while reading upstream, client: 172.18.0.1, server: , request: "GET /_nuxt/vendors/app.js HTTP/1.1", upstream: "http://172.18.0.2:5000/_nuxt/vendors/app.js", host: "localhost:8088", referrer: "http://localhost:8088/"
+2022/12/09 12:21:24 [error] 31#31: *6 upstream prematurely closed connection while reading upstream, client: 172.18.0.1, server: , request: "GET /_loading/sse HTTP/1.1", upstream: "http://172.18.0.2:5000/_loading/sse", host: "localhost:8088", referrer: "http://localhost:8088/login"
+2022/12/09 12:21:24 [error] 30#30: *2 upstream prematurely closed connection while reading upstream, client: 172.18.0.1, server: , request: "GET /__webpack_hmr/client HTTP/1.1", upstream: "http://172.18.0.2:5000/__webpack_hmr/client", host: "localhost:8088", referrer: "http://localhost:8088/"
+2022/12/09 12:21:27 [error] 31#31: *7 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: , request: "GET /_loading/sse HTTP/1.1", upstream: "http://172.18.0.2:5000/_loading/sse", host: "localhost:8088", referrer: "http://localhost:8088/login"
+2022/12/09 12:21:54 [error] 31#31: *7 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: , request: "GET /__webpack_hmr/client HTTP/1.1", upstream: "http://172.18.0.2:5000/__webpack_hmr/client", host: "localhost:8088", referrer: "http://localhost:8088/login"
+2022/12/09 12:22:24 [error] 31#31: *7 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: , request: "GET /__webpack_hmr/client HTTP/1.1", upstream: "http://172.18.0.2:5000/__webpack_hmr/client", host: "localhost:8088", referrer: "http://localhost:8088/login"
+2022/12/09 12:22:54 [error] 31#31: *7 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: , request: "GET /__webpack_hmr/client HTTP/1.1", upstream: "http://172.18.0.2:5000/__webpack_hmr/client", host: "localhost:8088", referrer: "http://localhost:8088/login"
+2022/12/09 12:23:24 [error] 31#31: *7 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: , request: "GET /__webpack_hmr/client HTTP/1.1", upstream: "http://172.18.0.2:5000/__webpack_hmr/client", host: "localhost:8088", referrer: "http://localhost:8088/login"
+2022/12/09 12:25:25 [warn] 35#35: *34 an upstream response is buffered to a temporary file /var/cache/nginx/proxy_temp/2/00/0000000002 while reading upstream, client: 172.18.0.1, server: , request: "GET /_nuxt/vendors/app.js HTTP/1.1", upstream: "http://172.18.0.2:5000/_nuxt/vendors/app.js", host: "localhost:8088", referrer: "http://localhost:8088/login"
+2022/12/09 12:26:26 [error] 35#35: *34 upstream timed out (110: Operation timed out) while reading upstream, client: 172.18.0.1, server: , request: "GET /_loading/sse HTTP/1.1", upstream: "http://172.18.0.2:5000/_loading/sse", host: "localhost:8088", referrer: "http://localhost:8088/login"

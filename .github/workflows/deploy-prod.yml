@@ -1,0 +1,71 @@
+## This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+## For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+#
+#name: Node.js CI
+#
+#on:
+#  pull_request:
+#    branches: [ "dev" ]
+#
+#jobs:
+#  build:
+#
+#    runs-on: ubuntu-latest
+#    strategy:
+#      matrix:
+#        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+#        node-version: [ 16.x ]
+#    steps:
+#      - name: Node Js
+#        uses: actions/setup-node@v1
+#      - name: Set output
+#        id: vars
+#        run: echo ::set-output name=short_ref::${GITHUB_HEAD_REF#refs/*/}
+#
+#      - name: Check output
+#        run: echo ${{ steps.vars.outputs.short_ref }}
+#      - name: Deploy using ssh
+#        uses: appleboy/ssh-action@master
+#        with:
+#          host: ${{ secrets.HOST }}
+#          username: ${{ secrets.USERNAME }}
+#          key: ${{ secrets.PRIVATE_KEY }}
+#          port: 22
+#          script: |
+#            cd /var/www/fdn.wm4d.com/web/ui/app/src
+#            sudo git fetch
+#            sudo git reset --hard origin/${{ steps.vars.outputs.short_ref }}
+#    #          sudo /home/ubuntu/.nvm/versions/node/v17.4.0/bin/npm install
+#    #          sudo /home/ubuntu/.nvm/versions/node/v17.4.0/bin/npm generate
+#    #
+#    #    - name: Install dependencies
+#    #      env:
+#    #        BASE_URL_DEVELOPMENT: ${{ secrets.STAGING_BASE_URL_DEVELOPMENT }}
+#    #        BASE_URL_PRODUCTION: ${{ secrets.STAGING_BASE_URL_DEVELOPMENT }}
+#    #        BASE_URL_STAGING: ${{ secrets.STAGING_BASE_URL_DEVELOPMENT }}
+#    #      working-directory: src/
+#    #      run: yarn install
+#
+#    #    - name: Build
+#    #      working-directory: src/
+#    #      run: npm run build --if-present
+#
+#    #    - name: Generate files
+#    #      working-directory: src/
+#    #      run: yarn generate
+#    #      env:
+#    #        BASE_URL_DEVELOPMENT: ${{ secrets.STAGING_BASE_URL_DEVELOPMENT }}
+#    #        BASE_URL_PRODUCTION: ${{ secrets.STAGING_BASE_URL_DEVELOPMENT }}
+#    #        BASE_URL_STAGING: ${{ secrets.STAGING_BASE_URL_DEVELOPMENT }}
+#    #        URL: ${{ secrets.STAGING_BASE_URL_DEVELOPMENT }}
+#
+#    #    - name: View files
+#    #      working-directory: src/
+#    #      run: ls
+#
+#    # Runs a set of commands using the runners shell
+##    - name: Run a multi-line script
+##      run: |
+##        mkdir ../build
+##        cp -TR ./src/dist ../build
+##        tar -cvf deploy.tar ../build/
